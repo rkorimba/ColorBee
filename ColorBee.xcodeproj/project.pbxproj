@@ -19,6 +19,9 @@
 		D0A8BDFA20BC0B280094E1E9 /* Constantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A8BDF920BC0B280094E1E9 /* Constantes.swift */; };
 		D0A8BDFC20BC0BB50094E1E9 /* Sol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A8BDFB20BC0BB50094E1E9 /* Sol.swift */; };
 		D0A8BDFE20BC0CE20094E1E9 /* MonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A8BDFD20BC0CE20094E1E9 /* MonLabel.swift */; };
+		D0A8BE0020BC0E920094E1E9 /* Obstacle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A8BDFF20BC0E920094E1E9 /* Obstacle.swift */; };
+		D0A8BE0220BC0EE90094E1E9 /* Cercle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A8BE0120BC0EE90094E1E9 /* Cercle.swift */; };
+		D0A8BE0420BC0F210094E1E9 /* Carre.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A8BE0320BC0F210094E1E9 /* Carre.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		D0A8BDF920BC0B280094E1E9 /* Constantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constantes.swift; sourceTree = "<group>"; };
 		D0A8BDFB20BC0BB50094E1E9 /* Sol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sol.swift; sourceTree = "<group>"; };
 		D0A8BDFD20BC0CE20094E1E9 /* MonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonLabel.swift; sourceTree = "<group>"; };
+		D0A8BDFF20BC0E920094E1E9 /* Obstacle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obstacle.swift; sourceTree = "<group>"; };
+		D0A8BE0120BC0EE90094E1E9 /* Cercle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cercle.swift; sourceTree = "<group>"; };
+		D0A8BE0320BC0F210094E1E9 /* Carre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carre.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,9 @@
 				D0A8BDF620BC07A70094E1E9 /* Joueur.swift */,
 				D0A8BDFB20BC0BB50094E1E9 /* Sol.swift */,
 				D0A8BDFD20BC0CE20094E1E9 /* MonLabel.swift */,
+				D0A8BDFF20BC0E920094E1E9 /* Obstacle.swift */,
+				D0A8BE0120BC0EE90094E1E9 /* Cercle.swift */,
+				D0A8BE0320BC0F210094E1E9 /* Carre.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -203,8 +212,11 @@
 				D0A8BDFC20BC0BB50094E1E9 /* Sol.swift in Sources */,
 				D0A8BDF720BC07A70094E1E9 /* Joueur.swift in Sources */,
 				D0A8BDFE20BC0CE20094E1E9 /* MonLabel.swift in Sources */,
+				D0A8BE0220BC0EE90094E1E9 /* Cercle.swift in Sources */,
 				D0A8BDE320BC03C20094E1E9 /* GameViewController.swift in Sources */,
+				D0A8BE0020BC0E920094E1E9 /* Obstacle.swift in Sources */,
 				D0A8BDDB20BC03C20094E1E9 /* AppDelegate.swift in Sources */,
+				D0A8BE0420BC0F210094E1E9 /* Carre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
