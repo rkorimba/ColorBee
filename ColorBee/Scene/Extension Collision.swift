@@ -20,8 +20,4 @@ extension GameScene: SKPhysicsContactDelegate {
             }
         }
     }
-    
-    
-    
-    
 }

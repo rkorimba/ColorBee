@@ -57,7 +57,7 @@ class GameScene: SKScene {
         if aleatoire() {
             obstacle = Cercle()
         } else {
-            obstacle = Cercle()
+            obstacle = Carre()
         }
         obstacle?.miseEnPlace()
         if obstacle != nil {
@@ -65,10 +65,6 @@ class GameScene: SKScene {
             obstacle?.position = CGPoint(x: cameraNode.frame.midX, y: espacement * CGFloat(obstacles.count))
             addChild(obstacle!)
         }
-        
-        
-        
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -85,11 +81,25 @@ class GameScene: SKScene {
             }
             scoreDuJoueur = 0
             scoreLabel.ajoutTexte(String(0))
+            cameraNode.position = CGPoint(x: size.width / 2, y: size.height / 2)
         }
     }
     
     override func update(_ currentTime: TimeInterval) {
-       
+        guard joueur != nil else { return }
+        let positionDeLaCamera = cameraNode.convert(joueur!.position, from: self)
+        if positionDeLaCamera.y > 0 {
+            cameraNode.position.y = joueur!.position.y
+        }
+        if positionDeLaCamera.y < -size.height / 2 {
+            gameOver()
+        }
+        if joueur!.position.y > espacement * CGFloat(obstacles.count - 2) + 200 {
+            scoreDuJoueur += 1
+            scoreLabel.ajoutTexte(String(scoreDuJoueur))
+            joueur?.changerDeCouleur()
+            ajouterObstacle()
+        }
     }
     
     func gameOver() {

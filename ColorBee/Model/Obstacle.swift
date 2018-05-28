@@ -13,6 +13,7 @@ class Obstacle: SKNode {
     func miseEnPlace() {
         
         guard let path = creerForme() else { return }
+        zPosition = 0
         for x in (0...3) {
             let quart = SKShapeNode(path: path.cgPath)
             quart.fillColor = COULEURS[x]
