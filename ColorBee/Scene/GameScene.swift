@@ -12,6 +12,7 @@ import GameplayKit
 class GameScene: SKScene {
     
     let cameraNode = SKCameraNode()
+    var joueur: Joueur?
     
     override func didMove(to view: SKView) {
         
@@ -21,19 +22,23 @@ class GameScene: SKScene {
         addChild(cameraNode)
         cameraNode.position = CGPoint(x: size.width / 2, y: size.height / 2)
     
-        let joueur = SKShapeNode(circleOfRadius: 25)
-        joueur.fillColor = .blue
-        joueur.strokeColor = .blue
-        joueur.position = CGPoint(x: size.width / 2, y: size.height / 2)
-        let physicsBody = SKPhysicsBody(circleOfRadius: 25)
-        physicsBody.affectedByGravity = true
-        physicsBody.mass = 1.5
-        joueur.physicsBody = physicsBody
-        addChild(joueur)
+        ajouterJoueur()
+    }
+    
+    func ajouterJoueur() {
+        
+        joueur = Joueur(circleOfRadius: 25)
+        joueur?.miseEnPlace(scene: self)
+        if joueur != nil {
+            addChild(joueur!)
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
+        if joueur != nil {
+            joueur?.sauter()
+        }
     }
     
     override func update(_ currentTime: TimeInterval) {
