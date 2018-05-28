@@ -22,7 +22,7 @@ class Cercle: Obstacle {
         path.addLine(to: CGPoint(x: 0, y: -175))
         path.addArc(withCenter: CGPoint.zero, radius: 160, startAngle: angle1, endAngle: 0, clockwise: true)
         path.addLine(to: CGPoint(x: 200, y: 0))
-        path.addArc(withCenter: CGPoint.zero, radius: 200, startAngle: 0, endAngle: angle1, clockwise: true)
+        path.addArc(withCenter: CGPoint.zero, radius: 200, startAngle: 0, endAngle: angle1, clockwise: false)
         return path
     }
 

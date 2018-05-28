@@ -15,7 +15,7 @@ class Carre: Obstacle {
     }
     
     override func creerForme() -> UIBezierPath? {
-        return UIBezierPath(roundedRect: CGRect(x: -200, y: -200, width: 400, height: 400), cornerRadius: 50)
+        return UIBezierPath(roundedRect: CGRect(x: -200, y: -200, width: 400, height: 40), cornerRadius: 50)
     }
     
 }

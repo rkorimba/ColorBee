@@ -12,8 +12,7 @@ class Joueur: SKShapeNode {
 
     func miseEnPlace(scene: SKScene) {
         
-        fillColor = .blue
-        strokeColor = .blue
+        changerDeCouleur()
         position = CGPoint(x: scene.size.width / 2, y: scene.size.height / 2)
         let body = SKPhysicsBody(circleOfRadius: 25)
         body.affectedByGravity = true
@@ -28,5 +27,11 @@ class Joueur: SKShapeNode {
         physicsBody?.velocity.dy = 500
     }
     
+    func changerDeCouleur() {
+        
+        let couleur = COULEURS[Int(arc4random_uniform(4))]
+        fillColor = couleur
+        strokeColor = couleur
+    }
     
 }
