@@ -22,6 +22,7 @@
 		D0A8BE0020BC0E920094E1E9 /* Obstacle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A8BDFF20BC0E920094E1E9 /* Obstacle.swift */; };
 		D0A8BE0220BC0EE90094E1E9 /* Cercle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A8BE0120BC0EE90094E1E9 /* Cercle.swift */; };
 		D0A8BE0420BC0F210094E1E9 /* Carre.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A8BE0320BC0F210094E1E9 /* Carre.swift */; };
+		D0A8BE0620BC15E80094E1E9 /* Extension Collision.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A8BE0520BC15E80094E1E9 /* Extension Collision.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		D0A8BDFF20BC0E920094E1E9 /* Obstacle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obstacle.swift; sourceTree = "<group>"; };
 		D0A8BE0120BC0EE90094E1E9 /* Cercle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cercle.swift; sourceTree = "<group>"; };
 		D0A8BE0320BC0F210094E1E9 /* Carre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carre.swift; sourceTree = "<group>"; };
+		D0A8BE0520BC15E80094E1E9 /* Extension Collision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension Collision.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				D0A8BDE020BC03C20094E1E9 /* GameScene.swift */,
+				D0A8BE0520BC15E80094E1E9 /* Extension Collision.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				D0A8BE0020BC0E920094E1E9 /* Obstacle.swift in Sources */,
 				D0A8BDDB20BC03C20094E1E9 /* AppDelegate.swift in Sources */,
 				D0A8BE0420BC0F210094E1E9 /* Carre.swift in Sources */,
+				D0A8BE0620BC15E80094E1E9 /* Extension Collision.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

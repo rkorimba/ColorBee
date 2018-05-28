@@ -18,10 +18,12 @@ class GameScene: SKScene {
     var scoreDuJoueur = 0
     var obstacles = [Obstacle]()
     let espacement: CGFloat = 750
+    var gameOverLabel: MonLabel?
     
     override func didMove(to view: SKView) {
         
         physicsWorld.gravity.dy = -5
+        physicsWorld.contactDelegate = self
         
         camera = cameraNode
         addChild(cameraNode)
@@ -74,9 +76,39 @@ class GameScene: SKScene {
         if joueur != nil {
             joueur?.sauter()
         }
+        if gameOverLabel != nil {
+            gameOverLabel?.removeFromParent()
+            gameOverLabel = nil
+            ajouterJoueur()
+            for _ in (0...2) {
+                ajouterObstacle()
+            }
+            scoreDuJoueur = 0
+            scoreLabel.ajoutTexte(String(0))
+        }
     }
     
     override func update(_ currentTime: TimeInterval) {
        
     }
+    
+    func gameOver() {
+        
+        if joueur != nil {
+            joueur?.removeFromParent()
+            joueur = nil
+        }
+        
+        for obstacle in obstacles {
+            obstacle.removeFromParent()
+        }
+        obstacles.removeAll()
+        gameOverLabel = MonLabel()
+        gameOverLabel?.miseEnPlace(x: 0, y: 0)
+        gameOverLabel?.ajoutTexte("Game OVER \n Score: " + String(scoreDuJoueur))
+        if gameOverLabel != nil {
+            cameraNode.addChild(gameOverLabel!)
+        }
+    }
+    
 }

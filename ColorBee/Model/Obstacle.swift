@@ -28,6 +28,9 @@ class Obstacle: SKNode {
             addChild(quart)
         }
         
+        let action = SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 5)
+        let repetition = SKAction.repeatForever(action)
+        run(repetition)
     }
     
     func creerForme() -> UIBezierPath? {
